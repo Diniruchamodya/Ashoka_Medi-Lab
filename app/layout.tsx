@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
 import { DemoStoreProvider } from '@/components/demo/demo-store'
 import { ToastProvider } from '@/components/shared/toast'
+import { publicAssetPath } from '@/lib/site-config'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -17,8 +18,8 @@ export const metadata: Metadata = {
     'With over 35 years of experience, Ashoka Medi-Lab delivers fast, accurate, and affordable laboratory services to support your health and well-being.',
   keywords: ['medical laboratory', 'blood test', 'diagnostic lab', 'health checkup', 'Ashoka Medi-Lab'],
   icons: {
-    icon: '/images/ashoka-logo.jpg',
-    apple: '/images/ashoka-logo.jpg',
+    icon: publicAssetPath('/images/ashoka-logo.jpg'),
+    apple: publicAssetPath('/images/ashoka-logo.jpg'),
   },
 }
 

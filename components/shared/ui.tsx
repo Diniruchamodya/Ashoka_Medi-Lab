@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useId } from 'react'
 import type { OrderStatus } from '@/lib/demo-data'
+import { publicAssetPath } from '@/lib/site-config'
 import { cn } from '@/lib/utils'
 
 export function Logo({ className, light = false }: { className?: string; light?: boolean }) {
@@ -13,7 +14,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
     <Link href="/" className={cn('flex items-center gap-2.5', className)} aria-label="Ashoka Medi-Lab home">
       <span className="relative block size-10 shrink-0 overflow-hidden rounded-xl bg-[#06b6d4] shadow-sm">
         <Image
-          src="/images/ashoka-logo.jpg"
+          src={publicAssetPath('/images/ashoka-logo.jpg')}
           alt=""
           fill
           sizes="40px"

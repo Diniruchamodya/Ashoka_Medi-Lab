@@ -3,7 +3,7 @@ import { Eye, HeartHandshake, ShieldCheck, Target, Users, Microscope } from 'luc
 import Image from 'next/image'
 import { PageHero, Reveal, SectionHeading } from '@/components/shared/ui'
 import { BookingCta } from '@/components/site/home-sections'
-import { siteConfig } from '@/lib/site-config'
+import { publicAssetPath, siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 md:px-6 md:py-28 lg:grid-cols-2">
         <Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl">
-            <Image src="/images/about-lab.png" alt="Rack of blood sample tubes being processed by an automated laboratory analyser" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            <Image src={publicAssetPath('/images/about-lab.png')} alt="Rack of blood sample tubes being processed by an automated laboratory analyser" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </Reveal>
         <div>

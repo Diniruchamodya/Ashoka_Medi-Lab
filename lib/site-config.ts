@@ -16,6 +16,10 @@ export const siteConfig = {
   hours: '[Opening hours]',
 }
 
+export function publicAssetPath(path: string) {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`
+}
+
 export const publicNav = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },

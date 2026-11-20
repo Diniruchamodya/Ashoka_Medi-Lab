@@ -23,7 +23,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { useDemoStore } from '@/components/demo/demo-store'
 import { BranchCard, PackageCard, ServiceCard } from '@/components/site/cards'
 import { Reveal, SectionHeading } from '@/components/shared/ui'
-import { siteConfig } from '@/lib/site-config'
+import { publicAssetPath, siteConfig } from '@/lib/site-config'
 import { cn } from '@/lib/utils'
 
 export function Hero() {
@@ -69,7 +69,7 @@ export function Hero() {
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }} className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-primary/15 sm:aspect-[5/5] lg:aspect-[4/5]">
-            <Image src="/images/hero-lab.png" alt="Laboratory scientist examining a sample tube beside a microscope" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            <Image src={publicAssetPath('/images/hero-lab.png')} alt="Laboratory scientist examining a sample tube beside a microscope" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           </div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -192,7 +192,7 @@ export function WhyChooseUs() {
     <section className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 md:px-6 md:py-28 lg:grid-cols-[1fr_1.2fr]">
       <Reveal className="relative">
         <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-          <Image src="/images/sample-collection.png" alt="Phlebotomist preparing to collect a blood sample from a smiling patient" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+          <Image src={publicAssetPath('/images/sample-collection.png')} alt="Phlebotomist preparing to collect a blood sample from a smiling patient" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
         </div>
         <div className="absolute -bottom-6 right-6 rounded-2xl bg-primary p-5 text-primary-foreground shadow-xl">
           <p className="font-heading text-3xl font-extrabold">{siteConfig.yearsOfExperience}+</p>
