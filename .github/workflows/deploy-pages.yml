@@ -38,7 +38,7 @@ jobs:
       - name: Build static site
         run: pnpm build
         env:
-          NEXT_PUBLIC_BASE_PATH: /Ashoka-Medi-Lab
+          NEXT_PUBLIC_BASE_PATH: /Ashoka_Medi-Lab
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
